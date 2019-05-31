@@ -1,0 +1,122 @@
+[advice]
+	addEmbeddedRepo                   = false
+	amWorkDir                         = false
+	checkoutAmbiguousRemoteBranchName = false
+	commitBeforeMerge                 = false
+	detachedHead                      = false
+	ignoredHook                       = false
+	implicitIdentity                  = false
+	nestedTag                         = false
+	pushAlreadyExists                 = false
+	pushFetchFirst                    = false
+	pushNeedsForce                    = false
+	pushNonFFCurrent                  = false
+	pushNonFFMatching                 = false
+	pushUnqualifiedRefname            = false
+	pushUpdateRejected                = false
+	resetQuiet                        = false
+	resolveConflict                   = false
+	rmHints                           = false
+	statusHints                       = false
+	statusUoption                     = false
+	waitingForEditor                  = false
+[alias]
+	yeet = "!git commit --no-gpg-sign --message \"reword! $(curl --silent --fail https://whatthecommit.com/index.txt)\n\nDISCLAIMER: this commit message has been retrieved from whatthecommit.com.\""
+	yolo = "!git commit --no-gpg-sign --message \"Temporary commit, please fix me up somewhere!\""
+[color]
+	ui = "auto"
+[column]
+	ui = "auto,dense"
+[commit]
+	gpgSign = true
+	verbose = 2
+[core]
+	pager = delta
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+[diff]
+	algorithm           = "patience"
+	colorMoved          = default
+	compactionHeuristic = true
+	renames             = "copies"
+	tool                = "meld"
+[difftool]
+	prompt = false
+[fetch]
+	output            = "compact"
+	prune             = true
+	pruneTags         = true
+	recurseSubmodules = true
+[filter "lfs"]
+	clean    = "git-lfs clean -- %f"
+	process  = "git-lfs filter-process"
+	required = true
+	smudge   = "git-lfs smudge -- %f"
+[grep]
+	extendedRegexp = true
+	lineNumber     = true
+[help]
+	autocorrect = 50
+[interactive]
+  diffFilter = delta --color-only
+[log]
+	decorate = "short"
+[merge]
+	commit = no
+	conflictstyle = diff3
+	ff = no
+	tool = "meld"
+[pull]
+	ff = only
+[push]
+	default = "simple"
+[rebase]
+	missingCommitsCheck = "warn"
+	stat                = true
+[rerere]
+	autoupdate = true
+	enabled    = true
+[submodule]
+	recurse = true
+[tag]
+	sort = version:refname
+[url "ssh://git@github.com/"]
+	pushInsteadOf = "https://github.com/"
+[maintenance "gc"]
+	enabled = true
+[maintenance "incremental-repack"]
+	enabled = true
+[maintenance "loose-objects"]
+	enabled = true
+[maintenance "prefetch"]
+	enabled = true
+[maintenance "commit-graph"]
+	enabled = true
+[maintenance]
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/transaction_csv_reader
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/price_normalizer
+	repo = /home/mozi/workspace/cv2
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/emma
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/better_signal_executor
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/arbiter
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/bitstamp-rs
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/delta-neutralizer
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/overlord
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/binance_websocket_reader
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/common
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/ema
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/bitstamp_websocket_reader
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/orderbook
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/trailing_stop_sell
+	repo = /home/mozi/workspace/nvxxu2i_stuff/shitcoin/playbook
+	repo = /home/mozi/workspace/dotfiles
+	repo = /home/mozi/workspace/github.com/nvxxu2i/radix-merkle-file-server-engineer-challenge
+	repo = /home/mozi/workspace/dotfiles/tmux/plugins/tpm
+	repo = /home/mozi/workspace/dotfiles/tmux/plugins/tmux-prefix-highlight
+	repo = /home/mozi/workspace/dotfiles/tmux/plugins/tmux-sensible
+	repo = /home/mozi/workspace/dotfiles/tmux/plugins/nord-tmux
+	repo = /home/mozi/workspace/dotfiles/tmux/plugins/tmux-battery
+	repo = /home/mozi/workspace/github.com/binance-rs-async
+	repo = /home/mozi/workspace/github.com/tracing
