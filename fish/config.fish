@@ -33,6 +33,10 @@ if status --is-interactive
     set -gx RUSTC_WRAPPER sccache
   end
 
+  if which zoxide
+    zoxide init --cmd=cd fish | source
+  end
+
   abbr --add --global j    journalctl --no-hostname -oshort-iso-precise --follow
   abbr --add --global g    git
   abbr --add --global ga   git add
