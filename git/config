@@ -42,7 +42,7 @@
 	side-by-side = false
 	tabs = 4
 [diff]
-	algorithm           = "patience"
+	algorithm           = "histogram"
 	colorMoved          = default
 	compactionHeuristic = true
 	renames             = "copies"
