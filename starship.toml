@@ -89,6 +89,7 @@ truncation_symbol = "…/"
 symbol = ""
 style = "bg:color_aqua"
 format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+ignore_branches = ['master', 'main']
 
 [git_status]
 style = "bg:color_aqua"

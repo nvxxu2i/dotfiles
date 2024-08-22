@@ -43,6 +43,7 @@ if status --is-interactive
   abbr --add --global gcp  git cherry-pick
   abbr --add --global gcpa git cherry-pick --abort
   abbr --add --global gcpc git cherry-pick --continue
+  abbr --add --global gf   git fetch --all --prune
   abbr --add --global gl   git log
   abbr --add --global glp  git log --patch
   abbr --add --global gmt  git mergetool
