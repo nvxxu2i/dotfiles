@@ -37,31 +37,34 @@ if status --is-interactive
     zoxide init --cmd=cd fish | source
   end
 
-  abbr --add --global j    journalctl --no-hostname -oshort-iso-precise --follow
-  abbr --add --global g    git
-  abbr --add --global ga   git add
-  abbr --add --global gcp  git cherry-pick
-  abbr --add --global gcpa git cherry-pick --abort
-  abbr --add --global gcpc git cherry-pick --continue
-  abbr --add --global gf   git fetch --all --prune
-  abbr --add --global gl   git log
-  abbr --add --global glp  git log --patch
-  abbr --add --global gmt  git mergetool
-  abbr --add --global gpf  git push --force-with-lease
-  abbr --add --global gp   git push
-  abbr --add --global gpd  'git push --delete origin (git rev-parse --abbrev-ref HEAD)'
-  abbr --add --global gpm  git push origin HEAD:master
-  abbr --add --global gra  git rebase --abort
-  abbr --add --global gras git rebase --interactive --autosquash --keep-base origin/HEAD
-  abbr --add --global grc  git rebase --continue
-  abbr --add --global grhh git reset --hard HEAD
-  abbr --add --global grhu 'git reset --hard \'@{upstream}\''
-  abbr --add --global gr   git rebase
-  abbr --add --global gri  git rebase --interactive
-  abbr --add --global r    rsync --verbose --progress --recursive -z -z
-  abbr --add --global s    sudo
-  abbr --add --global se   sudoedit
-  abbr --add --global syu  'sudo pacman -Syyuu --noconfirm; sudo pacman -Sc --noconfirm'
+  abbr -a -- cat   bat
+  abbr -a -- grep  rg
+  abbr -a -- ls    exa
+  abbr -a -- j     'journalctl --no-hostname -oshort-iso-precise --follow'
+  abbr -a -- ga    'git add'
+  abbr -a -- gcp   'git cherry-pick'
+  abbr -a -- gcpa  'git cherry-pick --abort'
+  abbr -a -- gcpc  'git cherry-pick --continue'
+  abbr -a -- gf    'git fetch --all --prune'
+  abbr -a -- gl    'git log'
+  abbr -a -- glp   'git log --patch'
+  abbr -a -- gmt   'git mergetool'
+  abbr -a -- gpf   'git push --force-with-lease'
+  abbr -a -- gp    'git push'
+  abbr -a -- gpd   'git push --delete origin (git rev-parse --abbrev-ref HEAD)'
+  abbr -a -- gpm   'git push origin HEAD:master'
+  abbr -a -- gra   'git rebase --abort'
+  abbr -a -- gras  'git rebase --interactive --autosquash --keep-base origin/HEAD'
+  abbr -a -- grc   'git rebase --continue'
+  abbr -a -- grhh  'git reset --hard HEAD'
+  abbr -a -- grhu  git\ reset\ --hard\ \'@\{upstream\}\'
+  abbr -a -- grhoh 'git reset --hard origin/HEAD'
+  abbr -a -- gr    'git rebase'
+  abbr -a -- gri   'git rebase --interactive'
+  abbr -a -- r     'rsync --verbose --progress --recursive -z -z'
+  abbr -a -- s     sudo
+  abbr -a -- se    sudoedit
+  abbr -a -- syu   'sudo pacman -Syyuu --noconfirm; sudo pacman -Sc --noconfirm'
 
   fortune | ponysay --wrap i
   thefuck --alias | source
