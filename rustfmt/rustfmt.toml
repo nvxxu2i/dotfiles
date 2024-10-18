@@ -1,10 +1,10 @@
 fn_single_line = false
 hard_tabs = false
-imports_granularity = "crate"
+imports_granularity = "Module"
 indent_style = "Block"
 match_block_trailing_comma = true
 reorder_impl_items = true
-version = "Two"
+style_edition = "2021"
 use_small_heuristics = "Max"
 wrap_comments = true
 group_imports = "StdExternalCrate"

@@ -3,7 +3,7 @@
 	oneFixupPerCommit = true
 	fixupTargetAlwaysSHA = true
 [alias]
-	yeet = "!git commit --no-gpg-sign --message \"reword! $(curl --silent --fail https://whatthecommit.com/index.txt)\n\nDISCLAIMER: this commit message has been retrieved from whatthecommit.com.\""
+	yeet = "!git commit --no-gpg-sign --message \"fixup! $(curl --silent --fail https://whatthecommit.com/index.txt)\n\nDISCLAIMER: this commit message has been retrieved from whatthecommit.com.\""
 	yolo = "!git commit --no-gpg-sign --message \"Temporary commit, please fix me up somewhere!\""
 [color]
 	ui = "auto"
