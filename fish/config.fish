@@ -25,8 +25,8 @@ if status --is-interactive
     abbr --add --global grep rg
   end
 
-  if which exa
-    abbr --add --global ls   exa
+  if which eza
+    abbr --add --global ls   eza
   end
 
   if which sccache
@@ -37,30 +37,30 @@ if status --is-interactive
     zoxide init --cmd=cd fish | source
   end
 
-  abbr -a -- cat   bat
-  abbr -a -- grep  rg
-  abbr -a -- ls    exa
+  if which git
+    abbr -a -- ga    'git add'
+    abbr -a -- gcp   'git cherry-pick'
+    abbr -a -- gcpa  'git cherry-pick --abort'
+    abbr -a -- gcpc  'git cherry-pick --continue'
+    abbr -a -- gf    'git fetch --all --prune'
+    abbr -a -- gl    'git log'
+    abbr -a -- glp   'git log --patch'
+    abbr -a -- gmt   'git mergetool'
+    abbr -a -- gpf   'git push --force-with-lease'
+    abbr -a -- gp    'git push'
+    abbr -a -- gpd   'git push --delete origin (git rev-parse --abbrev-ref HEAD)'
+    abbr -a -- gpm   'git push origin HEAD:master'
+    abbr -a -- gra   'git rebase --abort'
+    abbr -a -- gras  'git rebase --interactive --autosquash --keep-base origin/HEAD'
+    abbr -a -- grc   'git rebase --continue'
+    abbr -a -- grhh  'git reset --hard HEAD'
+    abbr -a -- grhu  git\ reset\ --hard\ \'@\{upstream\}\'
+    abbr -a -- grhoh 'git reset --hard origin/HEAD'
+    abbr -a -- gr    'git rebase'
+    abbr -a -- gri   'git rebase --interactive'
+  end
+
   abbr -a -- j     'journalctl --no-hostname -oshort-iso-precise --follow'
-  abbr -a -- ga    'git add'
-  abbr -a -- gcp   'git cherry-pick'
-  abbr -a -- gcpa  'git cherry-pick --abort'
-  abbr -a -- gcpc  'git cherry-pick --continue'
-  abbr -a -- gf    'git fetch --all --prune'
-  abbr -a -- gl    'git log'
-  abbr -a -- glp   'git log --patch'
-  abbr -a -- gmt   'git mergetool'
-  abbr -a -- gpf   'git push --force-with-lease'
-  abbr -a -- gp    'git push'
-  abbr -a -- gpd   'git push --delete origin (git rev-parse --abbrev-ref HEAD)'
-  abbr -a -- gpm   'git push origin HEAD:master'
-  abbr -a -- gra   'git rebase --abort'
-  abbr -a -- gras  'git rebase --interactive --autosquash --keep-base origin/HEAD'
-  abbr -a -- grc   'git rebase --continue'
-  abbr -a -- grhh  'git reset --hard HEAD'
-  abbr -a -- grhu  git\ reset\ --hard\ \'@\{upstream\}\'
-  abbr -a -- grhoh 'git reset --hard origin/HEAD'
-  abbr -a -- gr    'git rebase'
-  abbr -a -- gri   'git rebase --interactive'
   abbr -a -- r     'rsync --verbose --progress --recursive -z -z'
   abbr -a -- s     sudo
   abbr -a -- se    sudoedit
